@@ -96,6 +96,11 @@ header .material-symbols-outlined {
     display: none;
 }
 
+@media screen and (max-width: 576px) {
+    body {
+        width: 100vw;
+    }
+}
 
 @media screen and (max-width: 1200px) {
 
