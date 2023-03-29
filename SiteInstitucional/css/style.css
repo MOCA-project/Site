@@ -15,9 +15,9 @@
     font-family: 'Montserrat';
 }
 
-body {
+html {
     min-height: 100vh;
-    max-width: 100vw;
+    width: 100%;
     overflow-x: hidden;
 }
 .intro-scroll {
@@ -130,8 +130,8 @@ main .dicas h1 {
 
 main .dicas .numeracao {
     display: grid;
-    grid-template-columns: 300px 300px;
-    grid-template-rows: auto auto;
+    grid-template-columns: repeat(auto-fill, 300px);
+    grid-template-rows: auto;
     gap: 20px;
     justify-content: center;
     align-items: center;
@@ -191,15 +191,19 @@ main .funcionalidades .card-foto {
 }
 
 main .funcionalidades .card-foto .func {
-    display: grid;
-    grid-template-columns: 300px 300px;
-    gap: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
 }
 
 main .funcionalidades .card-foto .func .cards-func {
     border: 2px solid var(--azul-claro);
+    width: 300px;
+    height: 120px;
     border-radius: 10px;
-    padding: 5%;
+    padding: 2%;
     background-color: var(--branco);
 }
 
@@ -242,7 +246,7 @@ main .banner-app .card-app .frase-app h1 {
 }
 
 main .banner-app .card-app .frase-app img {
-    width: 300px;
+    width: 100%;
 }
 
 main .banner-app .card-app .cel-frase img {
@@ -267,6 +271,8 @@ footer .footer-menu {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 footer .footer-menu .footer-logo {
@@ -325,13 +331,15 @@ footer .footer-menu .footer-btn button {
 
 footer hr {
     width: 90%;
-    margin: 2%;
+    margin: 2rem;
 }
 
 footer .contato {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 footer .contato p {
     font-size: 0.9rem;
@@ -353,7 +361,7 @@ footer .contato .rede-social img{
 /* Responsividade e ajustes */
 /* ------------------------ */
 
-@media screen and (max-width: 576px) {
+@media screen and (min-width: 375px) {
     .col-es-1 {width: 8.33%;}
     .col-es-2 {width: 16.66%;}
     .col-es-3 {width: 25%;}
@@ -419,6 +427,13 @@ footer .contato .rede-social img{
     .col-lg-10 {width: 83.33%;}
     .col-lg-11 {width: 91.66%;}
     .col-lg-12 {width: 100%;}
+}
+
+@media screen and (max-width: 769px){
+    main .banner-app .card-app .cel-frase img {display: none;}
+    main .banner-app .card-app{justify-content: center;}
+    main .banner-app .card-app .frase-app h1 {text-align: center;}
+    footer .footer-menu {flex-direction: column; gap: 50px;}
 }
 
 @media screen and (max-width: 1200px) {
