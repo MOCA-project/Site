@@ -430,6 +430,23 @@ footer .contato .rede-social img{
 }
 
 @media screen and (max-width: 769px){
+    main .introducao {
+        min-height: 80vh;
+        flex-direction: column-reverse;
+        gap: 20px;
+        margin-top: 10%;
+    }
+    main .introducao .pc-cel-dash {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 20vh;
+    }
+    main .introducao .pc-cel-dash img { width: 70%;}
+    main .dicas, main .funcionalidades {
+        padding-top: 50px;
+        padding-bottom: 60px;
+    }
     main .banner-app .card-app .cel-frase img {display: none;}
     main .banner-app .card-app{justify-content: center;}
     main .banner-app .card-app .frase-app h1 {text-align: center;}
@@ -437,7 +454,7 @@ footer .contato .rede-social img{
 }
 
 @media screen and (max-width: 1200px) {
-    .pc-cel-dash, main .dicas img, main .funcionalidades .card-foto img {display: none;}
+    main .dicas img, main .funcionalidades .card-foto img {display: none;}
 }
 
 /* xl */
