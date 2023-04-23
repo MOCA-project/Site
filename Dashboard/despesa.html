@@ -13,10 +13,10 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
     />
-    <title>MOCA - DASHBOARD</title>
+    <title>MOCA - RECEITA</title>
   </head>
   <body>
-    <input type="checkbox" id="nav-toggle" />
+    <input type="month" id="nav-toggle" />
 
     <div class="sidebar">
       <div class="sidebar-brand">
@@ -29,25 +29,25 @@
       <div class="sidebar-menu">
         <ul>
           <li>
-            <a href="index2.html" class="active"
+            <a href="index2.html" 
               ><span class="material-symbols-outlined">pie_chart</span
               ><span>Dashboard</span></a
             >
           </li>
           <li>
-            <a href=""
+            <a href="" 
               ><span class="material-symbols-outlined">description</span
               ><span>Extrato</span></a
             >
           </li>
           <li>
-            <a href="receita.html"
+            <a href="receita.html" 
               ><span class="material-symbols-outlined">arrow_upward</span
               ><span>Receita</span></a
             >
           </li>
           <li>
-            <a href="despesa.html"
+            <a href="despesa.html" class="active"
               ><span class="material-symbols-outlined">arrow_downward</span
               ><span>Despesa</span></a
             >
@@ -94,11 +94,6 @@
           </label>
         </h2>
 
-        <div class="search-wrapper">
-          <span class="material-symbols-outlined">playlist_add_check</span>
-          <input type="" />
-        </div>
-
         <div class="user-wrapper">
           <div>
             <h4>Diogo Moreno</h4>
@@ -108,55 +103,53 @@
       </header>
 
       <main>
-        <div class="cards">
-          <div class="card-single">
-            <div>
-              <span>Saldo</span>
-              <h2>R$548,56</h2>
-            </div>
-            <div>
-              <span id="money" class="material-symbols-outlined"
-                >attach_money</span
-              >
-            </div>
-          </div>
-          <div class="card-single">
-            <div>
-              <span>Receita</span>
-              <h2>R$1200,00</h2>
-            </div>
-            <span id="up" class="material-symbols-outlined">arrow_upward</span>
-          </div>
-          <div class="card-single">
+        <div class="cards-despesas">
+          <div class="card-single-despesa">
             <div>
               <span>Despesa</span>
-              <h2>R$651,44</h2>
+              <h2>R$1200,00</h2>
             </div>
-            <div>
-              <span id="down" class="material-symbols-outlined"
-                >arrow_downward</span
-              >
-            </div>
+            <span id="down" class="material-symbols-outlined">arrow_downward</span>
           </div>
-          <div class="card-single">
+          <div class="card-despesa">
             <div>
-              <span>Cartões</span>
-              <h2>R$352,25</h2>
+              <span>Nova Receita</span> <br>
+              <h2 class="material-symbols-outlined">add</h2>
             </div>
-            <div>
-              <span id="cartao" class="material-symbols-outlined"
-                >credit_card</span
-              >
-            </div>
+            <!-- <span id="up" class="material-symbols-outlined">add</span> -->
           </div>
         </div>
 
-        <div class="cards-dash">
-          <div class="card-pos"></div>
-          <div class="card-pos"><h2>Receitas por categorias</h2></div>
-          <div class="card-pos"><h2>Cartões</h2></div>
-          <div class="card-pos"><h2>Despesa por categoria</h2></div>
-          <div class="card-pos"><h2>Porquinho</h2></div>
+        <div class="table-container">
+          <h2 class="heading"> <span class="material-symbols-outlined">chevron_left</span> Janeiro <span class="material-symbols-outlined">chevron_right</span></h2>
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Situação</th>
+                <th>Data</th>
+                <th>Descrição</th>
+                <th>Categoria</th>
+                <th>Valor</th>
+                <th>Ações</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-label="Situação">
+                  <span id="positivo" class="material-symbols-outlined">close</span>
+                  <span id="negativo" class="material-symbols-outlined">done</span>
+                </td>
+                <td data-label="Data">20/12/2023</td>
+                <td data-label="Descrição">Compra feita em tabacaria</td>
+                <td data-label="Categoria">Crédito</td>
+                <td data-label="Valor">R$200</td>
+                <td data-label="Ações">
+                  <button><span class="material-symbols-outlined">edit</span></button>                   
+                  <button><span class="material-symbols-outlined">delete</span></button>                  
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </main>
     </div>
